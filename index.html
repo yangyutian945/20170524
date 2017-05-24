@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <meta charset="utf-8">
+ </head>
+
+ <body>
+  <script>
+		function calChange(){
+			var price,count,money;
+			var total,change;
+			price=prompt("请输入商品单价:");
+			price=parseInt(price);
+			count=parseInt(prompt("请输入商品数量:"));
+			total=price * count;
+			if(total>=500){
+				alert("您已消费达到500元，享受8折优惠");
+				total=total*0.8;
+			}
+			alert("您共消费:"+total+"元");
+			money=parseInt(prompt("请付款："));
+			if(money >= total){
+				change=money-total;
+				alert("找零:"+change);
+			}else{
+				alert("您好，钱不够!!!");
+			}
+		}
+	</script>
+	<button onclick="calChange();">收银程序</button>
+ </body>
+</html>
